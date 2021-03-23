@@ -1,6 +1,6 @@
 import React, { useState, } from 'react';
 import { Button, Details, AboutDescription,
-      Container, Input } from './styles'
+      Container, Container2, Input } from './styles'
 // import { Link, } from 'react-router-dom';
 import Spinner from '../../components/Spinner'
 import FadeIn from "../../components/FadeIn"
@@ -29,6 +29,7 @@ function Home() {
   const [result, setResult] = useState('')
   const [searched, setSearched] = useState(false)
 
+
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       search(keyWords);
@@ -56,19 +57,20 @@ function Home() {
     setSearched(true)
   }
 
+
   if (!searched){
     return (
         <div style={{ width: '100%', minHeight: '75vh', maxWidth: '1024px' }}>
           <AboutDescription>
             <FadeIn>
               <div>
-                <Details>A devious search engine. Use at your own risk.
+                <Details>You might not find what you're looking for, but go for it anways.
                     </Details>
                 <Container>
                   <Input name='text' cols="120" placeholder="how to get girls... " value={keyWords} onChange={event => setKeyWords(event.currentTarget.value)} onKeyDown={handleKeyDown}></Input>
                 </Container>
                 <Container>
-                  <Button onClick={() => search(keyWords)}>Let's Go</Button>
+                  <Button onClick={() => search(keyWords)}>>>></Button>
                   {loading ? <Spinner /> : <br />}
                 </Container>
               </div>
@@ -82,12 +84,15 @@ function Home() {
         <div style={{ width: '100%', minHeight: '75vh', maxWidth: '1024px' }}>
             <FadeIn>
               <div>
-                <Container>
-                  <Input name='text' cols="120" placeholder="how to get girls... " value={keyWords} onChange={event => setKeyWords(event.currentTarget.value)}></Input>
-                  <Button onClick={() => search(keyWords)}>Let's Go</Button>
+                <Container2>
+                  <Input style={{ width: '83%' }} name='text' placeholder="how to get girls... " value={keyWords} onChange={event => setKeyWords(event.currentTarget.value)}></Input>
+                  <Button onClick={() => search(keyWords)}>>>></Button>
                   {loading ? <Spinner /> : <br />}
-                </Container>
-                {searched ? <Display summary={result}/>: <br />}
+                </Container2>
+
+                  <br/>
+                  {searched ? <Display summary={result}/>: <br />}
+
               </div>
             </FadeIn>
         </div>

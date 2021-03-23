@@ -21,7 +21,7 @@ export const Paragraph = styled.p`
 `
 
 export const Container = styled.div`
-    width: 80%;
+    width: 70%;
     margin: auto;
     display: flex;
     justify-content: center;

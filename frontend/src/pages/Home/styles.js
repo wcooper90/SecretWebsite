@@ -75,8 +75,18 @@ export const Button = styled.button`
       width: 90%;
       margin: auto;
       justify-content: center;
+      align-items: center;
       margin-bottom: 20px;
       display: flex;
+  `
+
+  export const Container2 = styled.div`
+      width: 90%;
+      min-width: 85%;
+      margin: auto;
+      margin-bottom: 20px;
+      padding: auto;
+      justify-content: center;
   `
 
   export const Input = styled.input`

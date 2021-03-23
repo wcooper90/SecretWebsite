@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card, Name, Link, Description } from './styles'
 
 const Placard = ({
     title = "",
@@ -10,9 +11,11 @@ const Placard = ({
     return (
       <div{...delegated}>
         {children}
-          <h3>{title}</h3>
-          <a href={link}>{link}</a>
-          <p>{description}</p>
+        <Card>
+          <Name>{title}</Name>
+          <Link href={link}>{link}</Link>
+          <Description>{description}</Description>
+        </Card>
       </div>
     );
 };
