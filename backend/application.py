@@ -20,5 +20,5 @@ def fetch_data():
     key_words = package['text']
     mode = package['mode']
     data = Search(key_words, mode)
-    returned = data.google_search()
+    returned = data.search_control()
     return jsonify(output=returned)

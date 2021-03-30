@@ -1,7 +1,14 @@
-import goslate
-text = 'Googletrans is a free and unlimited python library that implemented Google Translate API. This uses the Google Translate Ajax API to make calls to such methods as detecting and translating.'
-gs = goslate.Goslate()
-french = gs.translate(text, 'ja')
-english = gs.translate(french, 'en')
-print(text)
-print(english)
+import requests
+
+url = "https://mashape-community-urban-dictionary.p.rapidapi.com/define"
+
+querystring = {"term":"wat do"}
+
+headers = {
+    'x-rapidapi-key': "1f595f36bdmshcd4e6d7439ccdc8p1b679ejsn6dec59167692",
+    'x-rapidapi-host': "mashape-community-urban-dictionary.p.rapidapi.com"
+    }
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)

@@ -69,7 +69,36 @@ export const Button = styled.button`
       text-decoration: none;
       color: #ffffff;
     }
+
   `
+
+  export const Button2 = styled.button`
+      padding: 8px 15px;
+      border-radius: 5px;
+      border: none;
+      color: #000000;
+      font-size: 16px;
+      box-shadow: 0 2px 0 rgba(0,0,0,.045);
+      height: 45px;
+      font-weight: 475;
+      margin-left: 20px;
+      margin-top: 10px;
+
+      & a{
+        text-decoration: none;
+        color: #ffffff;
+      }
+
+      &:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      &:focus {
+        background-color: #9467BD;
+        outline:none;
+      }
+    `
 
   export const Container = styled.div`
       width: 90%;
@@ -79,6 +108,12 @@ export const Button = styled.button`
       margin-bottom: 20px;
       display: flex;
   `
+
+  export const Container3 = styled.div`
+      margin: auto;
+      display: flex;
+  `
+
 
   export const Container2 = styled.div`
       width: 90%;
@@ -111,3 +146,33 @@ export const Button = styled.button`
       box-shadow: 0 0 1.25rem rgba(31, 45, 61, 0.08);
     }
   `;
+
+
+
+export const SearchDetails = styled.div`
+  width: 100%;
+  padding: 1rem;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  margin-top: 27px;
+  background-color: white;
+  box-shadow: 0 0 0.7rem rgba(31, 45, 61, 0.1);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+
+  & p {
+    margin: 0px;
+    color: gray;
+    font-size: 12px;
+  }
+`;
+
+export const SearchButtons = styled.div`
+  width: 100%;
+  display: flex;
+  margin-top: 1em;
+  margin-bottom: 1em;
+`;

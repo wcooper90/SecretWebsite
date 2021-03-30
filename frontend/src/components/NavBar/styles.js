@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const NavbarContainer = styled.div`
-    width: 90%;
+    width: 85%;
     height: 100px;
     display: flex;
     justify-content: center;
