@@ -17,7 +17,6 @@ export const NavbarInner = styled.div`
 `
 
 export const Brand = styled.h2`
-  border-bottom: 2px solid black;
   text-decoration: none;
   color: #9467BD;
 `

@@ -4,6 +4,7 @@ from flask import Flask, request, jsonify, flash
 from flask_cors import CORS
 import os
 from main import Search
+from masthead import MastHead
 # import asyncio
 # from tornado.platform.asyncio import AnyThreadEventLoopPolicy
 #
@@ -21,4 +22,11 @@ def fetch_data():
     mode = package['mode']
     data = Search(key_words, mode)
     returned = data.search_control()
+    return jsonify(output=returned)
+
+
+@application.route('/fetch_masthead_data', methods=['GET'])
+def fetch_masthead_data():
+    object = MastHead()
+    returned = object.lampoon_search()
     return jsonify(output=returned)

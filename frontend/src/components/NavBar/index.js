@@ -27,6 +27,7 @@ const Navbar = () => {
             <Links>
                 <Link to='/'><NavItem>search</NavItem></Link>
                 <Link to='/about'><NavItem>about</NavItem></Link>
+                <Link to='/masthead'><NavItem>masthead</NavItem></Link>
             </Links>
         </NavbarInner>
       </NavbarContainer>

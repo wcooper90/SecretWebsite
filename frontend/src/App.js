@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import { MetaContainer } from './styles'
 import Home from './pages/Home'
+import Masthead from './pages/Masthead'
 import Navbar from './components/NavBar'
 import {
   Switch,
@@ -21,6 +22,7 @@ function App() {
             <Switch>
              <Route exact path="/" component={Home} />
              <Route path="/about" component={About}  />
+             <Route path="/masthead" component={Masthead}  />
            </Switch>
       <Footer />
     </MetaContainer>

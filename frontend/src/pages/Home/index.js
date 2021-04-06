@@ -1,10 +1,12 @@
 import React, { useState, } from 'react';
 import { Button, Details, AboutDescription,
-      Container, Container2, Container3, Input, Button2 } from './styles'
+      Container, Container2, Container3, Container4, Input, Button2 } from './styles'
 // import { Link, } from 'react-router-dom';
 import Spinner from '../../components/Spinner'
 import FadeIn from "../../components/FadeIn"
 import Placard from '../../components/Placard'
+import Weather from '../../components/Weather'
+import FactCheck from '../../components/FactCheck'
 
 
 const Display = (search) => {
@@ -77,7 +79,7 @@ function Home() {
                   <Input name='text' cols="120" placeholder="how to get girls... " value={keyWords} onChange={event => setKeyWords(event.currentTarget.value)} onKeyDown={handleKeyDown} autoFocus={true}></Input>
                 </Container>
                 <Container>
-                  <Button onClick={() => search(keyWords, mode)}>👀 👀</Button>
+                  <Button onClick={() => search(keyWords, mode)}>>>></Button>
                   {loading ? <Spinner /> : <br />}
                 </Container>
               </div>
